@@ -1,0 +1,28 @@
+{
+  "transactions": [
+    {
+      "id": 1,
+      "name": "Natalia",
+      "amount": 1500.00,
+      "email": "natalia@zopa.com"
+    },
+    {
+      "name": "Thomas",
+      "amount": 1000.00,
+      "email": "thomas@zopa.com",
+      "id": 2
+    },
+    {
+      "name": "Martin",
+      "amount": 2000.00,
+      "email": "martin@zopa.com",
+      "id": 3
+    }
+  ],
+  "account": {
+    "name": "My account",
+    "total_sent": 4500.00,
+    "left_available": 13500.00
+
+  }
+}
