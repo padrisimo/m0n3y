@@ -6,8 +6,8 @@ import { getTransactions } from '../../actions';
 class AccountTable extends Component {
   componentDidMount = () => this.props.getTransactions();
 
-  transactionRender = () => 
-    this.props.transactions.map(trans => <div key={trans.id}>
+  transactionRender = (transactions) => 
+    transactions.map(trans => <div key={trans.id}>
       <span>
         <div>{trans.name}</div>
         <div>{trans.email}</div>
@@ -16,15 +16,15 @@ class AccountTable extends Component {
     </div>)
 
   render() {
-    const { transactions, fetched } = this.props;
+    const { transactions, loading, fetched } = this.props;
 
-    if(!fetched){
+    if(!fetched && loading){
       return <div>loading...</div>
     }
 
     return (
       <div>
-        {this.transactionRender()}
+        {this.transactionRender(transactions)}
       </div>
     )
   }
@@ -33,7 +33,8 @@ class AccountTable extends Component {
 const mapStateToProps = (state) => (
   {
     transactions: state.transactions.data,
-    fetched: state.transactions.fetched
+    fetched: state.transactions.fetched,
+    loading: state.transactions.loading
   }
 )
 

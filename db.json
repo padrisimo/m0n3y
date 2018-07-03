@@ -3,26 +3,79 @@
     {
       "id": 1,
       "name": "Natalia",
-      "amount": 1500.00,
+      "amount": 1500,
       "email": "natalia@zopa.com"
     },
     {
       "name": "Thomas",
-      "amount": 1000.00,
+      "amount": 1000,
       "email": "thomas@zopa.com",
       "id": 2
     },
     {
       "name": "Martin",
-      "amount": 2000.00,
+      "amount": 2000,
       "email": "martin@zopa.com",
       "id": 3
+    },
+    {
+      "email": "chamizho@gmail.com",
+      "amount": "5",
+      "name": "zopa",
+      "id": 4
+    },
+    {
+      "email": "test@test.com",
+      "amount": "10",
+      "name": "zopa",
+      "id": 5
+    },
+    {
+      "email": "test@test.com",
+      "amount": "3",
+      "name": "zopa",
+      "id": 6
+    },
+    {
+      "email": "test@test.com",
+      "amount": "4",
+      "name": "dsa",
+      "id": 7
+    },
+    {
+      "email": "test@test.com",
+      "amount": "3",
+      "name": "zopa",
+      "id": 8
+    },
+    {
+      "email": "test@test.com",
+      "amount": "3",
+      "name": "peruleroo",
+      "id": 9
+    },
+    {
+      "email": "per@dasdas.com",
+      "amount": "4",
+      "name": "piruleroowoowowooww",
+      "id": 10
+    },
+    {
+      "email": "test@test.com",
+      "amount": "10",
+      "name": "pedro",
+      "id": 11
+    },
+    {
+      "email": "test@test.com",
+      "amount": "4",
+      "name": "pedrote",
+      "id": 12
     }
   ],
   "account": {
     "name": "My account",
-    "total_sent": 4500.00,
-    "left_available": 13500.00
-
+    "total_sent": 4500,
+    "left_available": 13500
   }
 }

@@ -16,7 +16,7 @@ export const getTransactions = () => dispatch =>
   dispatch(fetchTransactions(data)); 
  });
 
-export const postTransaction = () => dispatch => 
- api.transactions.add().then(user => {
-  dispatch(sendMoney(user)); 
+export const postTransaction = (data) => dispatch => 
+ api.transactions.add(data).then(res => {
+  dispatch(getTransactions()); 
  });
