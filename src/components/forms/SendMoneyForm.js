@@ -38,7 +38,7 @@ class SendMoneyForm extends Component {
   validate = (data) => {
     const errors = {};
     if (!Validator.isEmail(data.email)) errors.email = "Invalid email";
-    if (!Validator.isInt(data.amount, { min: 1, max: 10 })) errors.amount = "You Have not enought money to send";
+    if (!Validator.isInt(data.amount, { min: 1, max: this.props.top })) errors.amount = "You Have not enought money to send";
     if (!data.name) errors.name = "Please enter a valid name";
     return errors;
   }
@@ -95,7 +95,8 @@ class SendMoneyForm extends Component {
 }
 
 SendMoneyForm.propTypes = {
-  submit: PropTypes.func.isRequired
+  submit: PropTypes.func.isRequired,
+  top:PropTypes.number.isRequired
 }
 
 

@@ -19,63 +19,15 @@
       "id": 3
     },
     {
-      "email": "chamizho@gmail.com",
-      "amount": "5",
-      "name": "zopa",
+      "email": "adrian@zopa.com",
+      "amount": "300",
+      "name": "Adrian Fernandez Chamizo",
       "id": 4
-    },
-    {
-      "email": "test@test.com",
-      "amount": "10",
-      "name": "zopa",
-      "id": 5
-    },
-    {
-      "email": "test@test.com",
-      "amount": "3",
-      "name": "zopa",
-      "id": 6
-    },
-    {
-      "email": "test@test.com",
-      "amount": "4",
-      "name": "dsa",
-      "id": 7
-    },
-    {
-      "email": "test@test.com",
-      "amount": "3",
-      "name": "zopa",
-      "id": 8
-    },
-    {
-      "email": "test@test.com",
-      "amount": "3",
-      "name": "peruleroo",
-      "id": 9
-    },
-    {
-      "email": "per@dasdas.com",
-      "amount": "4",
-      "name": "piruleroowoowowooww",
-      "id": 10
-    },
-    {
-      "email": "test@test.com",
-      "amount": "10",
-      "name": "pedro",
-      "id": 11
-    },
-    {
-      "email": "test@test.com",
-      "amount": "4",
-      "name": "pedrote",
-      "id": 12
     }
   ],
   "account": {
-    "name": "My account",
-    "total_sent": 4500,
-    "left_available": 13500
+    "name": "My Account",
+    "total_sent": 4800,
+    "left_available": 13200
   }
 }
