@@ -1,0 +1,2 @@
+export const FETCH_TRANSACTIONS = 'FETCH_TRANSACTIONS';
+export const SEND_MONEY = 'SEND_MONEY';
