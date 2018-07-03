@@ -1,3 +1,4 @@
 export const FETCH_TRANSACTIONS = 'FETCH_TRANSACTIONS';
 export const FETCH_ACCOUNT = 'FETCH_ACCOUNT';
 export const SEND_MONEY = 'SEND_MONEY';
+export const HAND_FAILURE = 'HAND_FAILURE';

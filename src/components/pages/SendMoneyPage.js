@@ -29,6 +29,9 @@ class SendMoneyPage extends Component {
   }
 
   render() {
+    if(!this.props.fetched){
+      return <div>..loading</div>
+    }
     return (
       <div>
         <Modal
@@ -68,7 +71,8 @@ SendMoneyPage.propTypes = {
 }
 
 const mapStateToProps = (state) => ({
-  account: state.account.data
+  account: state.account.data,
+  fetched: state.account.fetched,
 })
 
 

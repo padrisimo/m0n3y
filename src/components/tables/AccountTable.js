@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Progress } from 'react-sweet-progress';
+import "react-sweet-progress/lib/style.css";
 import { getTransactions } from '../../actions';
 
 
@@ -28,6 +30,24 @@ class AccountTable extends Component {
         <div>
           <div>{account.total_sent}</div>
           <div>total sent</div>
+        </div>
+        <div>
+          <Progress
+            type="circle"
+            width={50}
+            status="success"
+            percent={account.total_sent / 18000 * 100}
+            strokeWidth={20}
+            theme={
+              {
+                success: {
+                  symbol: " ",
+                  trailColor: 'lightgrey',
+                  color: '#fbc630'
+                }
+              }
+            }
+          />
         </div>
         <div>
           <div>{account.left_available}</div>

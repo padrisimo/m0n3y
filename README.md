@@ -13,3 +13,8 @@ To Run
 ```
 > yarn start
 ```
+To Test
+
+```
+> yarn test
+```
