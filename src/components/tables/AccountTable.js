@@ -6,19 +6,14 @@ import { getTransactions } from '../../actions';
 import HeadOne from '../base/HeadOne';
 import HeadFour from '../base/HeadFour';
 import { Flexcolumn, Flexrow } from '../base/FlexGrid';
+import Card from '../base/Card'
 
 
 class AccountTable extends Component {
   componentDidMount = () => this.props.getTransactions();
 
   transactionRender = (transactions) =>
-    transactions.map(trans => <div key={trans.id}>
-      <span>
-        <div>{trans.name}</div>
-        <div>{trans.email}</div>
-      </span>
-      <span>{trans.amount}</span>
-    </div>)
+    transactions.map(trans => <Card key={trans.id} trans={trans}/>)
 
   render() {
     const { transactions, loading, fetched, account } = this.props;
@@ -32,7 +27,7 @@ class AccountTable extends Component {
         <HeadOne text={account.name} />
         <Flexrow paddTop='5em' paddBtm='1em'>
           <Flexcolumn size={2}>
-            <div>£{account.total_sent}</div>
+            <div>£{parseFloat(account.total_sent ).toFixed(2)}</div>
             <div>total sent</div>
           </Flexcolumn>
           <Flexcolumn size={2}>
@@ -54,7 +49,7 @@ class AccountTable extends Component {
             />
           </Flexcolumn>
           <Flexcolumn size={2}>
-            <div>£{account.left_available}</div>
+            <div>£{parseFloat(account.left_available).toFixed(2)}</div>
             <div>left available</div>
           </Flexcolumn>
         </Flexrow>

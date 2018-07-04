@@ -83,7 +83,7 @@ class SendMoneyForm extends Component {
             min="0"
             name="amount"
             placeholder="1"
-            step='0.1'
+            step='0.01'
             value={data.amount}
             onChange={this.onChange}
             required
