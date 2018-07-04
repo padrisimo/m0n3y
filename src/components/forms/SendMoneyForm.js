@@ -4,6 +4,7 @@ import { Form, Message } from 'semantic-ui-react';
 import Validator from 'validator';
 import InlineError from '../messages/InlineError';
 import Button from '../base/Button';
+import { Input } from '../base/Input';
 
 
 class SendMoneyForm extends Component {
@@ -54,7 +55,7 @@ class SendMoneyForm extends Component {
         </Message>}
         <Form.Field error={!!errors.name}>
           <label htmlFor="name">Name</label>
-          <input
+          <Input
             type="text"
             id="name"
             name="name"
@@ -66,7 +67,7 @@ class SendMoneyForm extends Component {
         </Form.Field>
         <Form.Field error={!!errors.email}>
           <label htmlFor="email">Email Adress</label>
-          <input
+          <Input
             type="email"
             id="email"
             name="email"
@@ -78,7 +79,7 @@ class SendMoneyForm extends Component {
         </Form.Field>
         <Form.Field error={!!errors.email}>
           <label htmlFor="amount">Amount</label>
-          <input
+          <Input
             type="number"
             id="amount"
             min="0"
@@ -91,7 +92,7 @@ class SendMoneyForm extends Component {
           />
           {errors.amount && <InlineError text={errors.amount} />}
         </Form.Field>
-        <Button marTop='5em' text='Send'/>
+        <Button marTop='5em' text='Send' />
       </Form>
     )
   }
@@ -99,7 +100,7 @@ class SendMoneyForm extends Component {
 
 SendMoneyForm.propTypes = {
   submit: PropTypes.func.isRequired,
-  top:PropTypes.number.isRequired
+  top: PropTypes.number.isRequired
 }
 
 
