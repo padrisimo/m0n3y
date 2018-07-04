@@ -19,21 +19,27 @@
       "id": 3
     },
     {
-      "email": "adrian@zopa.com",
-      "amount": "300",
-      "name": "Adrian Fernandez Chamizo",
+      "email": "test@test.com",
+      "amount": "10",
+      "name": "Lucas",
       "id": 4
     },
     {
-      "email": "test@test.com",
-      "amount": "5000",
-      "name": "zopa",
+      "email": "adrian@zopa.com",
+      "amount": "10",
+      "name": "Adrian Fernandez Chamizo",
       "id": 5
+    },
+    {
+      "email": "test@test.com",
+      "amount": "2.1",
+      "name": "Adrian Fernandez Chamizo",
+      "id": 6
     }
   ],
   "account": {
     "name": "My Account",
-    "total_sent": 9500,
-    "left_available": 8500
+    "total_sent": 4522.1,
+    "left_available": 13477.9
   }
 }

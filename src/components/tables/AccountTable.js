@@ -3,6 +3,9 @@ import { connect } from 'react-redux';
 import { Progress } from 'react-sweet-progress';
 import "react-sweet-progress/lib/style.css";
 import { getTransactions } from '../../actions';
+import HeadOne from '../base/HeadOne';
+import HeadFour from '../base/HeadFour';
+import { Flexcolumn, Flexrow } from '../base/FlexGrid';
 
 
 class AccountTable extends Component {
@@ -26,34 +29,36 @@ class AccountTable extends Component {
 
     return (
       <div>
-        <h1>{account.name}</h1>
-        <div>
-          <div>{account.total_sent}</div>
-          <div>total sent</div>
-        </div>
-        <div>
-          <Progress
-            type="circle"
-            width={50}
-            status="success"
-            percent={account.total_sent / 18000 * 100}
-            strokeWidth={20}
-            theme={
-              {
-                success: {
-                  symbol: " ",
-                  trailColor: 'lightgrey',
-                  color: '#fbc630'
+        <HeadOne text={account.name} />
+        <Flexrow paddTop='5em' paddBtm='1em'>
+          <Flexcolumn size={2}>
+            <div>£{account.total_sent}</div>
+            <div>total sent</div>
+          </Flexcolumn>
+          <Flexcolumn size={2}>
+            <Progress
+              type="circle"
+              width={50}
+              status="success"
+              percent={account.total_sent / 18000 * 100}
+              strokeWidth={25}
+              theme={
+                {
+                  success: {
+                    symbol: " ",
+                    trailColor: 'lightgrey',
+                    color: '#fbc630'
+                  }
                 }
               }
-            }
-          />
-        </div>
-        <div>
-          <div>{account.left_available}</div>
-          <div>left available</div>
-          ----------------
-        </div>
+            />
+          </Flexcolumn>
+          <Flexcolumn size={2}>
+            <div>£{account.left_available}</div>
+            <div>left available</div>
+          </Flexcolumn>
+        </Flexrow>
+        <HeadFour text='Transactions' />
         {this.transactionRender(transactions)}
       </div>
     )

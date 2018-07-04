@@ -4,7 +4,9 @@ import { connect } from 'react-redux'
 import SendMoneyForm from '../forms/SendMoneyForm';
 import { postTransaction, getAccount } from '../../actions';
 import AccountTable from '../tables/AccountTable';
-import { Button, Header, Icon, Modal, Grid } from 'semantic-ui-react'
+import { Button, Header, Icon, Modal, Grid } from 'semantic-ui-react';
+import HeadOne from '../base/HeadOne';
+import Container from '../base/Container'
 
 
 
@@ -21,15 +23,15 @@ class SendMoneyPage extends Component {
 
   submit = data => {
     const update = {
-        "name": "My Account",
-        "total_sent": 4500 + Number(data.amount),
-        "left_available": 13500 - Number(data.amount)
+      "name": "My Account",
+      "total_sent": this.props.account.total_sent + Number(data.amount),
+      "left_available": this.props.account.left_available - Number(data.amount)
     }
     return this.props.postTransaction(data, update).then(() => this.handleOpen());
   }
 
   render() {
-    if(!this.props.fetched){
+    if (!this.props.fetched) {
       return <div>..loading</div>
     }
     return (
@@ -52,16 +54,27 @@ class SendMoneyPage extends Component {
         </Modal>
 
         <Grid>
-          <Grid.Column mobile={16} tablet={8} computer={8}>
-            <h1>Zopa</h1>
-            <SendMoneyForm submit={this.submit} top={this.props.account.left_available} />
+          <Grid.Column mobile={16} tablet={8} computer={8} style={styles.nopad}>
+            <Container >
+              <HeadOne text='Send Money' />
+              <SendMoneyForm submit={this.submit} top={this.props.account.left_available} />
+            </Container>
           </Grid.Column>
-          <Grid.Column mobile={16} tablet={8} computer={8}>
-            <AccountTable account={this.props.account} />
+          <Grid.Column mobile={16} tablet={8} computer={8} style={styles.nopad}>
+            <Container line>
+              <AccountTable account={this.props.account} />
+            </Container>
           </Grid.Column>
         </Grid>
       </div>
     )
+  }
+}
+
+const styles = {
+  nopad: {
+    padding: 0,
+    textAlign: 'center'
   }
 }
 

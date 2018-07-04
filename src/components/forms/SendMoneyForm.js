@@ -38,7 +38,7 @@ class SendMoneyForm extends Component {
   validate = (data) => {
     const errors = {};
     if (!Validator.isEmail(data.email)) errors.email = "Invalid email";
-    if (!Validator.isInt(data.amount, { min: 1, max: this.props.top })) errors.amount = "You Have not enought money to send";
+    if (!data.amount) errors.amount = "Please enter amount"; else if (!Validator.isFloat(data.amount, { min: 1, max: this.props.top })) errors.amount = "You Have not enought money to send";
     if (!data.name) errors.name = "Please enter a valid name";
     return errors;
   }
@@ -83,8 +83,10 @@ class SendMoneyForm extends Component {
             min="0"
             name="amount"
             placeholder="1"
+            step='0.1'
             value={data.amount}
             onChange={this.onChange}
+            required
           />
           {errors.amount && <InlineError text={errors.amount} />}
         </Form.Field>
