@@ -47,11 +47,17 @@
       "amount": "1.39",
       "name": "Adrian Fernandez Chamizo",
       "id": 8
+    },
+    {
+      "email": "test@test.com",
+      "amount": "1.90",
+      "name": "Adrian Fernandez Chamizo",
+      "id": 9
     }
   ],
   "account": {
     "name": "My Account",
-    "total_sent": 4524.9400000000005,
-    "left_available": 13475.06
+    "total_sent": 4526.84,
+    "left_available": 13473.16
   }
 }

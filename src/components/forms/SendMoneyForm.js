@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { Form, Button, Message } from 'semantic-ui-react';
+import { Form, Message } from 'semantic-ui-react';
 import Validator from 'validator';
 import InlineError from '../messages/InlineError';
+import Button from '../base/Button';
 
 
 class SendMoneyForm extends Component {
@@ -90,7 +91,7 @@ class SendMoneyForm extends Component {
           />
           {errors.amount && <InlineError text={errors.amount} />}
         </Form.Field>
-        <Button primary>Send</Button>
+        <Button marTop='5em' text='Send'/>
       </Form>
     )
   }
