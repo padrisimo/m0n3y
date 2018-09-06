@@ -1,4 +1,4 @@
-# Zopa Test
+# M0n3y - fintech app
 
 
 ## After Cloning

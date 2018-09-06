@@ -4,18 +4,18 @@
       "id": 1,
       "name": "Natalia",
       "amount": 1500,
-      "email": "natalia@zopa.com"
+      "email": "natalia@finapp.com"
     },
     {
       "name": "Thomas",
       "amount": 1000,
-      "email": "thomas@zopa.com",
+      "email": "thomas@finapp.com",
       "id": 2
     },
     {
       "name": "Martin",
       "amount": 2000,
-      "email": "martin@zopa.com",
+      "email": "martin@finapp.com",
       "id": 3
     },
     {
@@ -25,7 +25,7 @@
       "id": 4
     },
     {
-      "email": "adrian@zopa.com",
+      "email": "adrian@finapp.com",
       "amount": "10",
       "name": "Adrian Fernandez Chamizo",
       "id": 5
@@ -37,7 +37,7 @@
       "id": 6
     },
     {
-      "email": "adrian@zopa.com",
+      "email": "adrian@finapp.com",
       "amount": "1.45",
       "name": "Adrian Fernandez Chamizo",
       "id": 7
